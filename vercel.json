@@ -1,0 +1,33 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/coconut-milk-glow/:match*",
+            "destination": "/coconut-milk-glow/index.html"
+        },
+        {
+            "source": "/sea-minerals/:match*",
+            "destination": "/sea-minerals/index.html"
+        },
+        {
+            "source": "/shea-butter-rich/:match*",
+            "destination": "/shea-butter-rich/index.html"
+        },
+        {
+            "source": "/shine-awapuhi/:match*",
+            "destination": "/shine-awapuhi/index.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
