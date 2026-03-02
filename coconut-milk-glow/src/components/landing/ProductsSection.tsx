@@ -1,6 +1,6 @@
-import productShampoo from "@/assets/product-shampoo.png";
-import productSpray from "@/assets/product-spray.png";
-import productMask from "@/assets/product-mask.png";
+import productShampoo from "@/assets/product-shampoo.webp";
+import productSpray from "@/assets/product-spray.webp";
+import productMask from "@/assets/product-mask.webp";
 
 const products = [
   {
@@ -52,11 +52,9 @@ const ProductsSection = () => {
             >
               <div className={index % 2 === 1 ? "md:order-2" : ""}>
                 <div className="bg-coconut rounded-2xl p-6 shadow-warm">
-                  <img
-                    src={product.image}
+                  <img src={product.image}
                     alt={product.name}
-                    className="w-full max-w-sm mx-auto rounded-xl"
-                  />
+                    className="w-full max-w-sm mx-auto rounded-xl" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className={`space-y-5 ${index % 2 === 1 ? "md:order-1" : ""}`}>

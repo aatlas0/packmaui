@@ -1,6 +1,6 @@
-import step1 from '@/assets/step1.png';
-import step2 from '@/assets/step2.png';
-import step3 from '@/assets/step3.png';
+import step1 from '@/assets/step1.webp';
+import step2 from '@/assets/step2.webp';
+import step3 from '@/assets/step3.webp';
 
 const steps = [
   {
@@ -58,11 +58,9 @@ const HowToUseSection = () => {
                 <div className="absolute inset-0 bg-primary/5 rounded-[2.5rem] transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
                 <div className="relative rounded-[2rem] overflow-hidden border-4 border-white shadow-warm-xl aspect-square sm:aspect-video lg:aspect-square">
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                  <img
-                    src={step.image}
+                  <img src={step.image}
                     alt={`الخطوة ${step.step}: ${step.title}`}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  />
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
 
                   {/* Floating Number Badge */}
                   <div className="absolute top-6 left-6 z-20 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center -rotate-12 group-hover:rotate-0 transition-transform duration-500">

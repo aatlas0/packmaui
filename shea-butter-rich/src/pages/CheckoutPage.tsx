@@ -7,10 +7,10 @@ import { translations } from '@/data/translations';
 import { submitOrderToSheet } from '@/services/googleSheets';
 
 // Product images for summary
-import shampooImg from '@/assets/product-shampoo.png';
-import maskImg from '@/assets/product-mask.png';
-import sprayImg from '@/assets/product-spray.png';
-import check1Img from '@/assets/check1.png';
+import shampooImg from '@/assets/product-shampoo.webp';
+import maskImg from '@/assets/product-mask.webp';
+import sprayImg from '@/assets/product-spray.webp';
+import check1Img from '@/assets/check1.webp';
 
 const CheckoutPage: React.FC = () => {
     const { language, dir } = useLanguage();
@@ -127,16 +127,12 @@ const CheckoutPage: React.FC = () => {
 
             {/* Background Image Container */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-                <img
-                    src={check1Img}
+                <img src={check1Img}
                     alt="Decorative background"
-                    className="absolute w-[800px] max-w-[150vw] opacity-[0.03] rotate-12 -left-[400px] top-40 blur-[2px]"
-                />
-                <img
-                    src={check1Img}
+                    className="absolute w-[800px] max-w-[150vw] opacity-[0.03] rotate-12 -left-[400px] top-40 blur-[2px]" loading="lazy" decoding="async" />
+                <img src={check1Img}
                     alt="Decorative background"
-                    className="absolute w-[1000px] max-w-[180vw] opacity-[0.02] -rotate-12 -right-[500px] bottom-0 blur-[4px]"
-                />
+                    className="absolute w-[1000px] max-w-[180vw] opacity-[0.02] -rotate-12 -right-[500px] bottom-0 blur-[4px]" loading="lazy" decoding="async" />
                 {/* Radial gradients to ensure content readability */}
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-warm-50/10 via-warm-50/80 to-warm-50" />
             </div>
@@ -302,7 +298,7 @@ const CheckoutPage: React.FC = () => {
                                     { img: sprayImg, name: "بخاخ Shea Butter", label: "Maui Moisture Heal & Hydrate" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-5 bg-white/5 p-4 rounded-3xl border border-white/10 shadow-inner group hover:bg-white/10 transition-all duration-300">
-                                        <img src={item.img} alt={item.name} className="w-16 h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" />
+                                        <img src={item.img} alt={item.name} className="w-16 h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" />
                                         <div className="flex-1">
                                             <h4 className="font-bold text-base text-white">{item.name}</h4>
                                             <p className="text-xs text-white/60 font-light">{item.label}</p>

@@ -1,17 +1,15 @@
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero11.png";
-import heroBundle from "@/assets/hero-bundle.png";
+import heroBg from "@/assets/hero11.webp";
+import heroBundle from "@/assets/hero-bundle.webp";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative h-[120vh] min-h-[95vh] flex items-center justify-center overflow-hidden pt-32 pb-20" dir="rtl">
+    <section id="hero" className="relative min-h-[110vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden pt-40 md:pt-32 pb-20" dir="rtl">
       {/* Background with Cinematic Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
+        <img src={heroBg}
           alt="Coconut Milk Glow Background"
-          className="w-full h-full object-cover object-center scale-105 animate-[scale-in_20s_ease-out_forwards]"
-        />
+          className="w-full h-full object-cover object-center scale-105 animate-[scale-in_20s_ease-out_forwards]" fetchPriority="high" />
         {/* Soft, luxurious gradient mask */}
         <div className="absolute inset-0 bg-gradient-to-l from-background/95 via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] md:backdrop-blur-0" />
@@ -84,11 +82,9 @@ const HeroSection = () => {
 
             {/* Product Image */}
             <div className="relative z-20 animate-float w-full flex justify-center">
-              <img
-                src={heroBundle}
+              <img src={heroBundle}
                 alt="Maui Moisture Coconut Milk Bundle"
-                className="w-[90%] sm:w-[80%] lg:w-[120%] lg:max-w-none xl:w-[110%] object-contain rounded-[2.5rem] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:-ml-12"
-              />
+                className="w-[90%] sm:w-[80%] lg:w-[120%] lg:max-w-none xl:w-[110%] object-contain rounded-[2.5rem] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:-ml-12" fetchPriority="high" />
             </div>
           </div>
 

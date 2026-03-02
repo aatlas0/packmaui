@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import heroBundle from "@/assets/hero-bundle.png";
-import heroBg from "@/assets/hero11.png";
+import heroBundle from "@/assets/hero-bundle.webp";
+import heroBg from "@/assets/hero11.webp";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center overflow-hidden pt-32 pb-20 gradient-hero" dir="rtl">
+    <section id="hero" className="relative min-h-[110vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden pt-40 md:pt-32 pb-20 gradient-hero" dir="rtl">
       {/* Background with Cinematic Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroBg} alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" />
+        <img src={heroBg} alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" fetchpriority="high" />
         {/* Soft, luxurious gradient mask */}
         <div className="absolute inset-0 bg-gradient-to-l from-background/95 via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] md:backdrop-blur-0" />
@@ -80,11 +80,9 @@ const HeroSection = () => {
 
             {/* Product Image */}
             <div className="relative z-20 animate-float w-full flex justify-center">
-              <img
-                src={heroBundle}
+              <img src={heroBundle}
                 alt="باك زبدة الشيا من Maui Moisture"
-                className="w-[85%] sm:w-[75%] lg:w-[110%] lg:max-w-[600px] object-contain rounded-[2.5rem] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:-ml-12 group-hover:scale-[1.02] transition-transform duration-700"
-              />
+                className="w-[85%] sm:w-[75%] lg:w-[110%] lg:max-w-[600px] object-contain rounded-[2.5rem] drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] lg:-ml-12 group-hover:scale-[1.02] transition-transform duration-700" fetchpriority="high" />
             </div>
           </div>
 

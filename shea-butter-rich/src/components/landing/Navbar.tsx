@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-3">
           {/* Logo */}
           <a href="#">
-            <img src={logo} alt="Maui Moisture" className="h-10" />
+            <img src={logo} alt="Maui Moisture" className="h-10" fetchpriority="high" />
           </a>
 
           {/* Desktop links */}

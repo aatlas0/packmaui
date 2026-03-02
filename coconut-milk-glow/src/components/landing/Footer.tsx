@@ -225,7 +225,7 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center gap-10">
                     <div className="text-center group">
-                        <img src={logo} alt="Nitalin" className="h-12 mx-auto mb-4 tracking-tight group-hover:scale-105 transition-transform drop-shadow-sm" />
+                        <img src={logo} alt="Nitalin" className="h-12 mx-auto mb-4 tracking-tight group-hover:scale-105 transition-transform drop-shadow-sm" loading="lazy" decoding="async" />
                         <p className="text-muted-foreground text-sm max-w-sm mx-auto font-medium">وجهتكم الأولى لمنتجات العناية بالبشرة والشعر عالية الجودة في المغرب.</p>
                     </div>
                     <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 px-4 w-full">

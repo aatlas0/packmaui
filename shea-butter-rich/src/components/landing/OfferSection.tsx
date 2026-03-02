@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroBundle from "@/assets/synergy1.png";
+import heroBundle from "@/assets/synergy1.webp";
 
 const OfferSection = () => {
   return (
@@ -18,11 +18,9 @@ const OfferSection = () => {
             {/* Image Side */}
             <div className="p-8 md:p-12 relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <img
-                src={heroBundle}
+              <img src={heroBundle}
                 alt="باك زبدة الشيا"
-                className="w-full relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl rounded-[2.5rem]"
-              />
+                className="w-full relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl rounded-[2.5rem]" loading="lazy" decoding="async" />
             </div>
 
             {/* Content Side */}

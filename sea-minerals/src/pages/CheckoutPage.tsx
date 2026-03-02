@@ -7,10 +7,10 @@ import { translations } from '@/data/translations';
 import { submitOrderToSheet } from '@/services/googleSheets';
 
 // Product images for summary
-import shampooImg from '@/assets/product-shampoo.png';
-import maskImg from '@/assets/product-mask.png';
-import sprayImg from '@/assets/product-spray.png';
-import check1 from '@/assets/check1.png';
+import shampooImg from '@/assets/product-shampoo.webp';
+import maskImg from '@/assets/product-mask.webp';
+import sprayImg from '@/assets/product-spray.webp';
+import check1 from '@/assets/check1.webp';
 
 const CheckoutPage: React.FC = () => {
     const { language, dir } = useLanguage();
@@ -126,7 +126,7 @@ const CheckoutPage: React.FC = () => {
         <div className="min-h-screen bg-warm-50 pt-8 pb-32 lg:py-16 px-4 font-sans text-gray-900 relative overflow-hidden">
             {/* Background Element */}
             <div className="absolute inset-0 pointer-events-none opacity-20 z-0">
-                <img src={check1} alt="" className="w-full h-full object-cover blur-[50px] mix-blend-multiply" />
+                <img src={check1} alt="" className="w-full h-full object-cover blur-[50px] mix-blend-multiply" loading="lazy" decoding="async" />
             </div>
 
             <div className="container mx-auto max-w-6xl relative z-10">
@@ -290,7 +290,7 @@ const CheckoutPage: React.FC = () => {
                                     { img: sprayImg, name: "بخاخ Sea Minerals", label: "Maui Moisture Colour Protect" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-5 bg-white/5 p-4 rounded-3xl border border-white/10 shadow-inner group hover:bg-white/10 transition-all duration-300">
-                                        <img src={item.img} alt={item.name} className="w-16 h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" />
+                                        <img src={item.img} alt={item.name} className="w-16 h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" />
                                         <div className="flex-1">
                                             <h4 className="font-bold text-base text-white">{item.name}</h4>
                                             <p className="text-xs text-white/60 font-light">{item.label}</p>

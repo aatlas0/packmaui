@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import beforeImg from "@/assets/before.png";
-import afterImg from "@/assets/after.png";
+import beforeImg from "@/assets/before.webp";
+import afterImg from "@/assets/after.webp";
 
 const BeforeAfterSection = () => {
   const [sliderPos, setSliderPos] = useState(50);
@@ -51,12 +51,10 @@ const BeforeAfterSection = () => {
               onTouchEnd={onPointerUp}
             >
               {/* After image (Base) */}
-              <img
-                src={afterImg}
+              <img src={afterImg}
                 alt="بعد استعمال باك زبدة الشيا"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-                draggable={false}
-              />
+                draggable={false} loading="lazy" decoding="async" />
 
               {/* Before image (Overlay) */}
               <div
@@ -65,13 +63,11 @@ const BeforeAfterSection = () => {
                   clipPath: `inset(0 0 0 ${100 - sliderPos}%)`,
                 }}
               >
-                <img
-                  src={beforeImg}
+                <img src={beforeImg}
                   alt="قبل استعمال باك زبدة الشيا"
                   className="absolute inset-0 w-full h-full object-cover"
                   style={{ filter: "grayscale(20%) sepia(20%) brightness(0.9)" }}
-                  draggable={false}
-                />
+                  draggable={false} loading="lazy" decoding="async" />
               </div>
 
               {/* Slider line & handle */}

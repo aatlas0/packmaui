@@ -1,6 +1,6 @@
-import step1 from "@/assets/step1.png";
-import step2 from "@/assets/step2.png";
-import step3 from "@/assets/step3.png";
+import step1 from "@/assets/step1.webp";
+import step2 from "@/assets/step2.webp";
+import step3 from "@/assets/step3.webp";
 
 const steps = [
   {
@@ -55,11 +55,9 @@ const HowToUseSection = () => {
                 <div className="absolute inset-0 bg-primary/10 rounded-[2rem] sm:rounded-[2.5rem] translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500" />
                 <div className="relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-warm border border-white/10 bg-white">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-                  <img
-                    src={step.image}
+                  <img src={step.image}
                     alt={step.title}
-                    className="w-full h-[300px] sm:h-[400px] md:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                    className="w-full h-[300px] sm:h-[400px] md:h-[550px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
                   {/* Step Number Overlay */}
                   <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20">
                     <span className="bg-white/95 backdrop-blur-sm text-primary font-bold text-xl sm:text-2xl w-10 h-10 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-lg border border-white">

@@ -1,5 +1,5 @@
-import synergy1 from "@/assets/synergy1.png";
-import synergy2 from "@/assets/synergy2.png";
+import synergy1 from "@/assets/synergy1.webp";
+import synergy2 from "@/assets/synergy2.webp";
 
 const benefits = [
   {
@@ -29,12 +29,12 @@ const SynergySection = () => {
           {/* Images Side (Left) */}
           <div className="w-full lg:w-1/2 relative aspect-square lg:aspect-auto border-transparent h-[400px] lg:h-[500px]">
             <div className="absolute top-0 right-0 w-[65%] h-[75%] rounded-[2rem] overflow-hidden shadow-warm-xl z-20 transform hover:-translate-y-2 transition-transform duration-500 border-4 border-white">
-              <img src={synergy1} alt="Synergy 1" className="w-full h-full object-cover" />
+              <img src={synergy1} alt="Synergy 1" className="w-full h-full object-cover" loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
             </div>
 
             <div className="absolute bottom-0 left-0 w-[60%] h-[65%] rounded-[2rem] overflow-hidden shadow-2xl z-30 transform -translate-y-8 translate-x-8 hover:-translate-y-10 transition-transform duration-500 border-4 border-white">
-              <img src={synergy2} alt="Synergy 2" className="w-full h-full object-cover" />
+              <img src={synergy2} alt="Synergy 2" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </div>
 
             {/* Decorative Element */}

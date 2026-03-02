@@ -8,10 +8,10 @@ import { translations } from '@/data/translations';
 import { submitOrderToSheet } from '@/services/googleSheets';
 
 // Product images for summary
-import shampooImg from '@/assets/product-shampoo.png';
-import maskImg from '@/assets/product-mask.png';
-import sprayImg from '@/assets/product-spray.png';
-import checkBgImg from '@/assets/check1.png';
+import shampooImg from '@/assets/product-shampoo.webp';
+import maskImg from '@/assets/product-mask.webp';
+import sprayImg from '@/assets/product-spray.webp';
+import checkBgImg from '@/assets/check1.webp';
 
 const CheckoutPage: React.FC = () => {
     useEffect(() => {
@@ -99,7 +99,7 @@ const CheckoutPage: React.FC = () => {
             <div className="min-h-screen bg-warm-50 flex items-center justify-center p-4 font-sans text-gray-900 relative overflow-hidden">
                 {/* Decorative Background for Success State */}
                 <div className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%] opacity-10 pointer-events-none mix-blend-multiply">
-                    <img src={checkBgImg} alt="" className="w-full h-full object-cover blur-sm" />
+                    <img src={checkBgImg} alt="" className="w-full h-full object-cover blur-sm" loading="lazy" decoding="async" />
                 </div>
 
                 <motion.div
@@ -134,7 +134,7 @@ const CheckoutPage: React.FC = () => {
                     transition={{ duration: 1.5, ease: "easeOut" }}
                     className="absolute -top-10 -left-10 w-[650px] h-[650px] opacity-50 mix-blend-multiply rotate-[-10deg] blur-[1px]"
                 >
-                    <img src={checkBgImg} alt="" className="w-full h-full object-contain" />
+                    <img src={checkBgImg} alt="" className="w-full h-full object-contain" loading="lazy" decoding="async" />
                 </motion.div>
 
                 {/* Floating Bottom Image */}
@@ -144,7 +144,7 @@ const CheckoutPage: React.FC = () => {
                     transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
                     className="absolute -bottom-20 -right-10 w-[800px] h-[800px] opacity-40 mix-blend-multiply rotate-[10deg] blur-[2px]"
                 >
-                    <img src={checkBgImg} alt="" className="w-full h-full object-contain" />
+                    <img src={checkBgImg} alt="" className="w-full h-full object-contain" loading="lazy" decoding="async" />
                 </motion.div>
 
                 {/* Lightened Gradient overlay to ensure text readability but keep images vibrant */}
@@ -302,7 +302,7 @@ const CheckoutPage: React.FC = () => {
                                     { img: sprayImg, name: "بخاخ الزيت المعالج", label: "Maui Moisture Finish" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3 sm:gap-5 bg-white/5 p-3 sm:p-4 rounded-3xl border border-white/10 shadow-inner group hover:bg-white/10 transition-all duration-300">
-                                        <img src={item.img} alt={item.name} className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" />
+                                        <img src={item.img} alt={item.name} className="w-12 h-12 sm:w-16 sm:h-16 object-contain rounded-2xl bg-white/10 p-1 group-hover:scale-110 transition-transform" loading="lazy" decoding="async" />
                                         <div className="flex-1">
                                             <h4 className="font-bold text-sm sm:text-base text-white">{item.name}</h4>
                                             <p className="text-[10px] sm:text-xs text-white/60 font-light">{item.label}</p>
