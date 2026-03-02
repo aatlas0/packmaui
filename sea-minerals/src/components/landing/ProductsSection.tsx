@@ -32,7 +32,7 @@ const products = [
 const ProductsSection = () => {
   return (
     <section id="products" className="py-20 bg-background">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             تعرّفي على كل منتج في الباك

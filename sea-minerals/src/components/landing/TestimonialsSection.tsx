@@ -38,10 +38,10 @@ const TestimonialsSection = () => {
           <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4 border border-primary/20">
             <span className="text-primary font-bold text-sm tracking-wide">قصص نجاح</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 md:mb-6">
             آراء <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-accent">عميلاتنا</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             تجارب حقيقية من نساء جربن الباك وشاهدن الفرق
           </p>
         </div>

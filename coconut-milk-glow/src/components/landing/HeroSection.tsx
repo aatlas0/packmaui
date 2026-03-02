@@ -1,11 +1,24 @@
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero11.webp";
 import heroBundle from "@/assets/hero-bundle.webp";
 
 const HeroSection = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const [showStickyCta, setShowStickyCta] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowStickyCta(!entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <section id="hero" className="relative min-h-[110vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden pt-40 md:pt-32 pb-20" dir="rtl">
+      <section ref={heroRef} id="hero" className="relative min-h-[110vh] md:min-h-[100vh] flex items-center justify-center overflow-hidden pt-40 md:pt-32 pb-20" dir="rtl">
         {/* Background with Cinematic Overlay */}
         <div className="absolute inset-0 z-0">
           <img src={heroBg}
@@ -94,7 +107,7 @@ const HeroSection = () => {
       </section>
 
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/90 backdrop-blur-xl border-t border-border/50 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+      <div className={`fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/90 backdrop-blur-xl border-t border-border/50 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.15)] transition-transform duration-300 ${showStickyCta ? 'translate-y-0' : 'translate-y-full'}`}>
         <Link
           to="/checkout"
           className="block w-full py-3.5 bg-primary text-primary-foreground rounded-full text-center text-lg font-bold shadow-lg"

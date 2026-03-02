@@ -44,10 +44,10 @@ const BenefitsSection = () => {
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-primary font-bold text-sm tracking-wide">عناية فائقة</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 md:mb-6">
             فوائد <span className="text-transparent bg-clip-text bg-gradient-to-l from-primary to-accent">الروتين المتكامل</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             استثمري في شعرك مع روتين يمنحك كل ما تحتاجينه
           </p>
         </div>

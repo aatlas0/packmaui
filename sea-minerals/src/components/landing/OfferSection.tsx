@@ -4,7 +4,7 @@ import heroBundle from "@/assets/synergy2.webp";
 const OfferSection = () => {
   return (
     <section id="offer" className="py-20 bg-coconut">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-background rounded-3xl shadow-warm-lg overflow-hidden border border-border/50">
           <div className="grid md:grid-cols-2">
             <div className="p-6 relative">

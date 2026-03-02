@@ -1,11 +1,24 @@
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import heroBundle from "@/assets/hero-bundle.webp";
 import heroBg from "@/assets/hero11.webp";
 
 const HeroSection = () => {
+  const heroRef = useRef<HTMLElement>(null);
+  const [showStickyCta, setShowStickyCta] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowStickyCta(!entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (heroRef.current) observer.observe(heroRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <section id="hero" className="relative min-h-[110vh] md:min-h-[100vh] gradient-hero flex items-center overflow-hidden pt-32 md:pt-20">
+      <section ref={heroRef} id="hero" className="relative min-h-[110vh] md:min-h-[100vh] gradient-hero flex items-center overflow-hidden pt-32 md:pt-20">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img src={heroBg} alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay" fetchPriority="high" />
@@ -86,7 +99,7 @@ const HeroSection = () => {
 
                 <img src={heroBundle}
                   alt="باك معادن البحر من Maui Moisture"
-                  className="w-full lg:w-full max-w-[500px] mx-auto relative z-10 rounded-[2.5rem] shadow-2xl group-hover:scale-[1.02] transition-transform duration-700 mt-8 lg:mt-0" fetchPriority="high" />
+                  className="w-full lg:w-full max-w-[500px] mx-auto relative z-10 rounded-[2.5rem] shadow-2xl group-hover:scale-[1.02] transition-transform duration-700 mt-8 mb-16 lg:mt-0 lg:mb-0" fetchPriority="high" />
 
                 {/* Floating Price Badge */}
                 <div className="absolute -bottom-6 -left-4 sm:-left-8 md:bottom-8 md:-left-12 bg-accent text-accent-foreground rounded-full w-32 h-32 sm:w-36 sm:h-36 flex flex-col items-center justify-center shadow-warm-xl animate-float border-4 border-background z-20">
@@ -104,7 +117,7 @@ const HeroSection = () => {
       </section>
 
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/90 backdrop-blur-xl border-t border-border/50 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+      <div className={`fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/90 backdrop-blur-xl border-t border-border/50 p-3 shadow-[0_-4px_20px_rgba(0,0,0,0.15)] transition-transform duration-300 ${showStickyCta ? 'translate-y-0' : 'translate-y-full'}`}>
         <Link
           to="/checkout"
           className="block w-full py-3.5 bg-primary text-primary-foreground rounded-full text-center text-lg font-bold shadow-lg"

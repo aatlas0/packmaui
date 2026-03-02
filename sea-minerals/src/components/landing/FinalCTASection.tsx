@@ -7,13 +7,13 @@ const FinalCTASection = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
           لا تضيّعي الفرصة – العرض لفترة محدودة!
         </h2>
-        <p className="text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
           احصلي على باك معادن البحر المتكامل بسعر خاص واستمتعي بشعر صحي ولامع وحماية فائقة للون
         </p>
 
         <div className="inline-flex flex-col items-center gap-4">
           <div className="flex items-center gap-4 text-primary-foreground">
-            <span className="text-5xl font-black">449 درهم</span>
+            <span className="text-4xl md:text-5xl font-black">449 درهم</span>
             <span className="text-2xl line-through opacity-60">520 درهم</span>
           </div>
 

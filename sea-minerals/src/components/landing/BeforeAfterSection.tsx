@@ -21,7 +21,7 @@ const BeforeAfterSection = () => {
 
   return (
     <section id="results" className="py-20 bg-coconut">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             النتائج الحقيقية

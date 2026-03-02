@@ -56,11 +56,11 @@ const SynergySection = () => {
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 <span className="text-primary font-bold text-sm tracking-wide">السر في التكامل</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-10 leading-[1.3]">
+              <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6 md:mb-10 leading-[1.3]">
                 <span className="inline-block pb-2">لماذا يعمل هذا الباك</span>
                 <span className="block mt-3 text-transparent bg-clip-text bg-gradient-to-l from-primary to-accent font-black pb-3">بشكل أفضل معاً؟</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 كل منتج يكمّل الآخر ليمنحك نتائج مضاعفة لا يمكن لمنتج واحد تحقيقها
               </p>
             </div>

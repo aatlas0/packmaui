@@ -34,10 +34,10 @@ const ProblemSection = () => {
             <span className="w-2 h-2 rounded-full bg-destructive animate-pulse" />
             <span className="text-destructive font-bold text-sm tracking-wide">مشاكل شائعة</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 md:mb-6">
             هل تعانين من <span className="text-destructive">هذه المشاكل؟</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             إذا كان شعرك يعاني من الجفاف والتلف، فأنتِ لست وحدك. الحل يبدأ من روتين صحيح.
           </p>
         </div>
