@@ -10,7 +10,7 @@ const OfferSection = () => {
             <div className="p-6">
               <img src={heroBundle}
                 alt="باك جوز الهند"
-                className="w-full rounded-2xl" loading="lazy" decoding="async" />
+                className="w-full rounded-2xl aspect-[5/4] object-cover md:aspect-auto" loading="lazy" decoding="async" />
             </div>
             <div className="p-8 md:p-10 flex flex-col justify-center">
               <span className="inline-block w-fit bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-bold mb-4">

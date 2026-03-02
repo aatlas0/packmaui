@@ -20,7 +20,7 @@ const OfferSection = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <img src={heroBundle}
                 alt="باك زبدة الشيا"
-                className="w-full relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl rounded-[2.5rem]" loading="lazy" decoding="async" />
+                className="w-full relative z-10 hover:scale-105 transition-transform duration-700 drop-shadow-2xl rounded-[2.5rem] aspect-[5/4] object-cover md:aspect-auto" loading="lazy" decoding="async" />
             </div>
 
             {/* Content Side */}

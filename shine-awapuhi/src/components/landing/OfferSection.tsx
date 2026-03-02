@@ -21,7 +21,7 @@ const OfferSection = () => {
                 <div className="absolute inset-4 bg-primary/20 blur-[60px] rounded-full mix-blend-multiply transition-all duration-700 group-hover:bg-primary/30 group-hover:blur-[80px]"></div>
                 <img src={heroBundle}
                   alt="باك أوابوهي للمعان"
-                  className="w-full h-auto object-contain rounded-[2.5rem] relative z-10 animate-float drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                  className="w-full h-auto object-cover rounded-[2.5rem] relative z-10 animate-float drop-shadow-2xl transition-transform duration-700 group-hover:scale-105 aspect-[5/4] lg:aspect-auto lg:object-contain" loading="lazy" decoding="async" />
               </div>
             </div>
 
